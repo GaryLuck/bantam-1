@@ -4,10 +4,6 @@
 
 package bantam
 
-import (
-	"fmt"
-)
-
 const (
 	TokenEOF TokenType = iota
 	// Variable
@@ -52,7 +48,7 @@ func (t TokenType) String() string {
 	if s, ok := tokenNames[t]; ok {
 		return s
 	}
-	return fmt.Sprintf("<%s>", t)
+	return "<Can't find token string>"
 }
 
 type Token struct {
